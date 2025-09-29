@@ -1,1 +1,12 @@
-# linux_config
+# linux config
+- vscode
+- sqlworkbench
+- python
+- pip
+- npm
+- nvm
+- zsh
+- tweak
+- extension
+- account
+- git and github
