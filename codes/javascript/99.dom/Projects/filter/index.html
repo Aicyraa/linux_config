@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"  
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_circle"
+    />
+  </head>
+  <body>
+
+   <div class="nav">
+    <input type="search" id="search"> 
+  </div>
+
+
+    <div class="modal-container">
+      <div class="overlay">
+
+      </div>
+      <div class="header">
+        <h2>add user</h2>
+        <div class="btn">x</div>
+      </div>
+      <div class="input-container">
+        <input type="text" id="name" placeholder="name" />
+      </div>
+      <div class="input-container">
+        <input type="text" id="age" placeholder="age" />
+      </div>
+      <div class="input-container">
+        <input type="date" id="bday" placeholder="birthday" />
+      </div>
+      <div class="input-container">
+        <select name="status`" id="status" value="student">
+            <option value="Student">Student</option>
+            <option value="Working">Working</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="list"> 
+      <div class="label">
+        <div >ID</div>
+        <div >NAME</div>
+        <div >AGE</div>
+        <div >BIRTH</div>
+        <div >GENDER</div>
+        <div >STATUS</div>
+      </div>
+    </div>
+
+    <span class="material-symbols-outlined btn" id="modal"> +  </span>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,41 @@
+:root {
+  --bg-dark: hsl(222, 5%, 83%);
+  --bg: hsl(222, 10%, 95%);
+  --bg-light: hsl(222, 10%, 98%);
+
+  --text: hsl(0, 0%, 95%);
+  --text-muted: hsl(0, 0%, 80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+#openModal {
+  background: var(--bg) url(svg/plus.svg) no-repeat center/cover;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px black;
+}
+
+.addRecipeModal {
+  border: 1px solid black;
+  display: none;
+  margin: 0 auto;
+  width: 450px;
+}
+
+.addRecipeModal.show {
+  display: flex;
+  justify-content: center;
+  
+}

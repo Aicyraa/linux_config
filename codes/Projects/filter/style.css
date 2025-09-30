@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --bg-dark: hsl(0, 5%, 90%);
+  --bg: hsl(0, 0%, 95%);
+  --bg-light: hsl(0, 0%, 98%);
+  --text: hsl(0, 0%, 10%);
+  --muted-text: hsl(0, 0%, 20%);
+  --border: hsl(0, 0%, 87%);
+ 
+  --primary: hsl(40, 70%, 60%);
+  --secondary: hsl(90, 60%, 60%);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates";
+}
+
+body{
+  background-color: var(--bg-dark);
+}
+
+#modal{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal-container {
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.modal-container.show {
+  display: flex;
+}
+
+/* SVG */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* LIST DESIGN */
+
+.list {
+  background-color: var(--bg);
+  box-shadow: 0 0 4px var(--border);
+  border-radius: 8px;
+  width: 550px;
+  height: 500px;
+  overflow: scroll;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label{
+
+}
+
+.data:nth-child(2n){
+  background-color: var(--primary);
+}
+
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track{
+  display: none;
+}
+
+.data, .label {
+  margin: 2px 0;
+  width: 550px;
+  font-size: 10px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  background-color: var(--bg-light);
+  padding: 5px 4px;
+  gap: 10px;
+}
+
+
+
+.bday, .isAdult{
+  font-size: 10px;
+}
+.data > div, .label > div {
+  width: 60px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to top, #353B3C, #353B3C, #353B3C) no-repeat center/cover fixed;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+        }
+
+        .inside-container {
+            padding: 25px 10px;
+            width: 40rem;
+            box-sizing: border-box;
+            background: #EEF0F2;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0px -5px 20px rgb(0, 0, 0);
+        }
+
+        /* Text */
+        .top {
+            display: block;
+            margin: 10px 0 5px 0;
+            background: hsl(64, 51%, 49%);
+            padding: 5px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: 200ms ease-out;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        /* For Borders */
+        .border {
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+
+        .border-1 {
+            border-left: 5px solid hsl(20, 50%, 49%);
+        }
+
+        .border-2 {
+            border-left: 5px solid hsl(200, 50%, 60%);
+        }
+
+        .border-3 {
+            border-left: 5px solid hsl(250, 50%, 60%);
+        }
+
+        .divider {
+            border: 2px solid #846A6A;
+            border-radius: 12px;
+            margin: 10px 0 10px 0;
+        }
+
+        /* Hover */
+
+        .top:hover{
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="inside-container">
+            <!-- <span class="top text"> About </span>
+            <hr class="divider"> -->
+            <div class="border border-1">
+                <span class="top"> Coding</span>
+                <span class="top"> Gaming</span>
+                <span class="top"> Designing</span>
+            </div>
+            <!-- <span class="top text"> Hobbies </span>
+            <hr class="divider"> -->
+            <div class="border border-2">
+                <span class="top"> Aspiring developer</span>
+                <span class="top"> Loves clean code</span>
+                <span class="top"> Always learning</span>
+            </div>
+            <!-- <span class="top text"> Projects</span>
+            <hr class="divider"> -->
+            <div class="border border-3">
+                <span class="top"> To-do App</span>
+                <span class="top"> Chat System</span>
+                <span class="top"> Portfolio Site</span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+:root {
+  --light-: hsl(210, 20%, 60%); /* Beau Blue (#BCD2E8) */
+  --med-light-: hsl(204, 30%, 40%); /* Dark Sky Blue (#91BAD6) */
+  --primary-: hsl(203, 36%, 50%); /* Moonstone Blue (#73A5C6) */
+  --secondary-: hsl(210, 48%, 35%); /* Metallic Blue (#2E5984) */
+  --text-: hsl(213, 55%, 26%); /* Rainbow Indigo (#1E3F66) */
+  --dark-text-: hsl(210, 94%, 21%); /* Dark Midnight Blue (#033466) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    120deg,
+    var(--med-light-),
+    var(--light-),
+    var(--light-),
+    var(--light-),
+    var(--med-light-)
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: hsl(0, 0%, 95%);
+  box-shadow: 0 2px 7px hsl(0, 1%, 30%), 0 0 1px hsl(0, 0%, 10%) inset;
+  border-radius: 8px;
+  height: 450px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  width: 400px;
+  padding: 20px 10px;
+  border-radius: 8px 8px 0 0;
+  background: var(--primary-);
+  box-shadow: 0 2px 5px hsl(0, 0%, 50%), 0 0 1px hsl(0, 0%, 10%) inset;
+}
+
+input {
+  width: 290px;
+  padding: 4px 6px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0 0 4px black inset;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0 0 4px black inset;
+  transition: background-color 0.2s ease-out;
+}
+
+#add-task {
+  font-weight: 700;
+  width: 80px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: hsl(270, 35%, 90%); /* purplish tone */
+}
+
+.task-container::-webkit-scrollbar {
+  display: none;
+}
+
+.task-container {
+  margin-top: 10px;
+  border-radius: 6px;
+  width: 380px;
+  height: 350px;
+  overflow: scroll;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* 
+    Task
+*/
+
+.task {
+  background-color: var(--secondary-);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  padding: 10px 10px;
+  width: 380px;
+  border-radius: 8px 8px 16px 8px;
+  color: var(--text-);
+  box-shadow: 0 0 2px hsl(0, 0%, 20%);
+  transition: opacity 0.7s linear, background-color 0.2s ease-in-out;
+}
+
+.task:hover {
+  background-color: hsl(210, 48%, 45%);;
+}
+
+.task-text {
+  width: 260px;
+  height: auto;
+  word-break: break-all;
+  color: rgb(245, 241, 241);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.task-text p::first-letter {
+  text-transform: uppercase;
+}
+
+.remove-btn {
+  display: block;
+  letter-spacing: 2px;
+  width: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.remove-btn:hover {
+  transform: scale(1.2);
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: rgb(255, 255, 255);
+}
+
+.task.disappear {
+  opacity: 0;
+}
+
+/* 
+  modal warning
+*/
+
+/* Overlay to dim background and focus attention */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  z-index: 999;
+}
+
+/* Modal container styling */
+.warning-modal {
+  background-color: hsl(210, 48%, 96%); /* very light blue-gray */
+  width: 320px;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* soft elevated shadow */
+  z-index: 1000;
+  color: hsl(210, 48%, 20%);
+}
+
+/* Close button (optional) */
+.warning-modal .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: hsl(210, 48%, 20%);
+  cursor: pointer;
+}
+
+.warning-modal .close-btn:focus,
+.warning-modal button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(82, 144, 255, 0.5);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .input-container {
+    width: 100%;
+    padding: 15px 8px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  #add-task {
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .task-container {
+    width: 90%;
+    height: 300px;
+  }
+
+  .task {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .task-text {
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+
+  .warning-modal {
+    width: 90%;
+    max-width: 90%;
+    padding: 15px;
+    font-size: 14px;
+  }
+}

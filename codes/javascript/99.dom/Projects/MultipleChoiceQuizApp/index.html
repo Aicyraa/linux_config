@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+    <div class="username_overlay">
+        <div class="input_container">
+            <input type="text" placeholder="Enter your name" id="username">
+            <button id="Proceed"> Continue </button>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="welcome_user">
+            <span> Welcome, <strong id="user"> </strong>!</span>
+        </div>
+        <ul class="user_option">
+            <li id="addQues"> + Question</li>
+            <li id="viewScore"> Score</li>
+        </ul>
+    </div>
+
+    <div class="sidebar_score ">
+        <span class="close-sidebar">&times;</span>
+        <div class="sidebar_container">
+            <!-- Score items will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div id="question-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Question</h2>
+            <div class="form-group">
+                <input type="text" id="new-question" placeholder="Enter your question">
+            </div>
+            <div id="choices-container">
+                <div class="choice-group">
+                    <input type="text" class="choice-input" placeholder="Choice 1">
+                    <input type="radio" name="correct-answer" value="0" checked>
+                </div>
+                <div class="choice-group">
+                    <input type="text" class="choice-input" placeholder="Choice 2">
+                    <input type="radio" name="correct-answer" value="1">
+                </div>
+                <div class="choice-group">
+                    <input type="text" class="choice-input" placeholder="Choice 3">
+                    <input type="radio" name="correct-answer" value="2">
+                </div>
+                <div class="choice-group">
+                    <input type="text" class="choice-input" placeholder="Choice 4">
+                    <input type="radio" name="correct-answer" value="3">
+                </div>
+            </div>
+            <button id="add-question-btn">Add Question</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container hide">
+            <div id="quiz-container">
+                <div class="qst_container">
+                    <!-- Question content -->
+                </div>
+                <div class="chs_container">
+                    <!-- Choices content -->
+                </div>
+            </div>
+        </div>
+        <div class="btn_container">
+            <button id="start"> Start</button>
+        </div>
+    </div>
+
+</body>
+<script src="script/overlay.js"></script>
+<script src="script/question.js"></script>
+<script src="script/main.js"></script>
+<script>
+    alert(`This page is for practice purposes only
+      * All the data is saved via local storage
+      * View your score by clicking the "SCORE" button at the top
+      * Add questions by clicking the "QUESTION" button at the top
+      * bwahahaha ;)) `)
+</script>
+
+</html>

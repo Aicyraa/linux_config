@@ -1,0 +1,44 @@
+<!-- 
+     nt The user can click a button to get a random small quiz question (like math, or general trivia).
+     nt They answer by clicking Yes/No or typing an answer.
+     nt The app checks if they’re correct, and gives feedback ("Correct!" or "Try again").
+     nt Uses functions to organize quiz logic, loops for random picking, if and logical operators to handle answers. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="modal">
+        <span id="showMsg"> </span>
+    </div>
+
+    <div class="grid-container">
+        <div class="item ques-container">
+            <p id="question-container"> </p>
+        </div>
+        <div class="item but-container">
+            <button id="yes"> Yes </button>
+            <button id="no"> No </button>
+        </div>
+        <div class="item start-container">
+            <button id="getQuestion">Start</button>
+            <div class="score-container">
+                <span> Score: </span>
+                <span id="score"> 0 </span>
+                <span>/</span>
+                <span id="outOf">  </span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,141 @@
+@import url(navbar.css);
+@import url(overlay.css);
+
+:root {
+  --bg-dark: hsl(0 0% 90%);
+  --bg: hsl(300 0% 95%);
+  --bg-light: hsl(300 50% 100%);
+  --text: hsl(0 0% 4%);
+  --text-muted: hsl(0 0% 28%);
+  --highlight: hsl(300 50% 100%);
+  --border: hsl(300 0% 50%);
+  --border-muted: hsl(300 0% 62%);
+  --primary: hsl(185 100% 10%);
+  --secondary: hsl(2 46% 31%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+.main {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: var(--bg-light);
+  box-shadow: 0 3px 7px var(--border-muted);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 450px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: margin 0.2s ease-in;
+}
+
+.container.hide {
+    display: none;
+}
+
+.qst_container {
+  font-size: 20px;
+}
+
+.chs_container {
+  font-size: 1.1rem;
+}
+
+.choices {
+  margin: 8px 0 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--bg-dark);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.choices:hover {
+    background-color: hsl(0, 0%, 85%);
+    transform: scale(1.02);
+}
+
+.choices::first-letter{
+  text-transform: uppercase;
+}
+
+.choices.correct{
+  background-color: var(--success);
+  color: white;
+}
+
+.choices.wrong{
+  background-color: var(--danger);
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+#start{
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#start.big-btn {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+}
+
+.hide{
+ display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .qst_container {
+        font-size: 18px;
+    }
+
+    .choices {
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <span> Enter text</span>
+      <input type="text" id="text-input" />
+    </div>
+
+    <div class="text-container">
+      <span id="text-result">Text</span>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div class="method-container">
+          <div class="container-1">
+
+            <div class="item item-1">
+              <span class="label"> Length </span>
+              <input type="text" readonly class="nonMethod" />
+            </div>
+
+            <div class="item item-2">
+              <span class="label"> To Upper Case </span>
+              <input type="text" readonly class="nonMethod" />
+            </div>
+
+            <div class="item item-3">
+              <span class="label"> To Lower Case </span>
+              <input type="text" readonly class="nonMethod" />
+            </div>
+          </div>
+
+          <div class="container-2">
+            <div class="item item-4">
+              <span class="label"> String[] </span>
+              <div class="inputs">
+                <input type="number" value="1" class="numbers" />
+              </div>
+              <input type="text" class="methods" />
+            </div>
+
+            <div class="item item-4">
+              <span class="label"> String.at() </span>
+              <div class="inputs">
+                <input type="number" value="1" class="numbers" />
+              </div>
+              <input type="text" class="methods" />
+            </div>
+
+            <div class="item item-5">
+              <span class="label"> Slice </span>
+              <div class="inputs">
+                <input
+                  type="number"
+                  value=0"
+                  placeholder="starting value"
+                  class="numbers"
+                />
+                <input
+                  type="number"
+                  value="1"
+                  placeholder="end value"
+                  class="numbers"
+                />
+              </div>
+              <input type="text" class="methods" />
+            </div>
+
+            <div class="item item-6">
+              <span class="label"> Index Of </span>
+              <div class="inputs">
+                <input type="text" value="a" class="numbers" />
+              </div>
+              <input type="text" class="methods" />
+            </div>
+
+            <div class="item item-7">
+              <span class="label"> includes </span>
+              <div class="inputs">
+                <input type="text" value="a" class="numbers" />
+                <input type="number" value="1" class="numbers" />
+              </div>
+              <input type="text" class="methods" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

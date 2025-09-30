@@ -1,0 +1,56 @@
+{
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "material-icon-theme.hidesExplorerArrows": true,
+  "editor.linkedEditing": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.editor.showTabs": "single",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": true,
+  "breadcrumbs.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 18,
+  "explorer.compactFolders": false,
+  "window.titleBarStyle": "custom",
+
+  "editor.multiCursorModifier": "alt",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 2,
+  "editor.letterSpacing": 0.3,
+  "editor.fontSize": 16
+  ,
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.links": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.triggerExpansionOnTab": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.visible": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "bottom",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "workbench.colorTheme": "One Dark Pro Night Flat"
+}
